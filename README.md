@@ -4,10 +4,10 @@
 
 This project is a [Breakout](https://en.wikipedia.org/wiki/Breakout_(video_game))
 video game developed basically on [SDL2 Library](https://www.libsdl.org/). There
-consists 3 levels of different difficulty, as well as providing two languages of
+consist 3 levels of different difficulty, as well as providing two languages of
 English and Chinese for the player.
 
-This release is compiled on Windows 10 bits.
+This release is compiled on Windows 10 bits. [Download here](https://ziqing19.github.io/breakout-release/release/release_v1.0_win_x86.zip).
 
 ---
 
