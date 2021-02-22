@@ -1,0 +1,153 @@
+\hypertarget{class_resource_manager}{}\doxysection{Resource\+Manager Class Reference}
+\label{class_resource_manager}\index{ResourceManager@{ResourceManager}}
+
+
+A generic resource manager that stores different resources and ensures the uniqueness of the copy in the memory. It is designed to be a singleton, and can be called by the static \mbox{\hyperlink{class_resource_manager_a91756683167c290b33b7525881122940}{instance()}} method.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_resource_manager_a84c34e2f3ac9d2a2e4d337767ea8c749}{init}} (SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Initialze the resource manager. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture $\ast$ \mbox{\hyperlink{class_resource_manager_a66afca84ed36cbd59506133f3382eee9}{get\+Image\+Texture}} (std\+::string const \&img\+Path)
+\begin{DoxyCompactList}\small\item\em get the image texture from specific path \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture $\ast$ \mbox{\hyperlink{class_resource_manager_a0ecf80e605676ccf237e774e27487330}{get\+Text\+Texture}} (char const $\ast$text, std\+::string const \&style, bool is\+English)
+\begin{DoxyCompactList}\small\item\em get the text texture of specific content \end{DoxyCompactList}\item 
+Mix\+\_\+\+Music $\ast$ \mbox{\hyperlink{class_resource_manager_a5fd4cf89a3090b4903e6052dcfc378d8}{get\+Music}} (std\+::string const \&music\+Path)
+\begin{DoxyCompactList}\small\item\em get the music from specific path, used for long music \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_mix___chunk}{Mix\+\_\+\+Chunk}} $\ast$ \mbox{\hyperlink{class_resource_manager_a540dbbee0a8688c85f09e8e4a919601e}{get\+Chunk}} (std\+::string const \&chunk\+Path)
+\begin{DoxyCompactList}\small\item\em get the music chunk from specific path, used for short music \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_resource_manager_a1a7e1c5f097d977ebd90a685b293af35}\label{class_resource_manager_a1a7e1c5f097d977ebd90a685b293af35}} 
+void \mbox{\hyperlink{class_resource_manager_a1a7e1c5f097d977ebd90a685b293af35}{destroy}} ()
+\begin{DoxyCompactList}\small\item\em destroy all resources stored in the resource manager \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} \& \mbox{\hyperlink{class_resource_manager_a91756683167c290b33b7525881122940}{instance}} ()
+\begin{DoxyCompactList}\small\item\em acquire the instance of the resource manager \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A generic resource manager that stores different resources and ensures the uniqueness of the copy in the memory. It is designed to be a singleton, and can be called by the static \mbox{\hyperlink{class_resource_manager_a91756683167c290b33b7525881122940}{instance()}} method. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_resource_manager_a540dbbee0a8688c85f09e8e4a919601e}\label{class_resource_manager_a540dbbee0a8688c85f09e8e4a919601e}} 
+\index{ResourceManager@{ResourceManager}!getChunk@{getChunk}}
+\index{getChunk@{getChunk}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getChunk()}{getChunk()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_mix___chunk}{Mix\+\_\+\+Chunk}} $\ast$ Resource\+Manager\+::get\+Chunk (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{chunk\+Path }\end{DoxyParamCaption})}
+
+
+
+get the music chunk from specific path, used for short music 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+Path} & path of specific music chunk \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired music chunk 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_resource_manager_a66afca84ed36cbd59506133f3382eee9}\label{class_resource_manager_a66afca84ed36cbd59506133f3382eee9}} 
+\index{ResourceManager@{ResourceManager}!getImageTexture@{getImageTexture}}
+\index{getImageTexture@{getImageTexture}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getImageTexture()}{getImageTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture $\ast$ Resource\+Manager\+::get\+Image\+Texture (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{img\+Path }\end{DoxyParamCaption})}
+
+
+
+get the image texture from specific path 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+Path} & path of specific image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired texture 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_resource_manager_a5fd4cf89a3090b4903e6052dcfc378d8}\label{class_resource_manager_a5fd4cf89a3090b4903e6052dcfc378d8}} 
+\index{ResourceManager@{ResourceManager}!getMusic@{getMusic}}
+\index{getMusic@{getMusic}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getMusic()}{getMusic()}}
+{\footnotesize\ttfamily Mix\+\_\+\+Music $\ast$ Resource\+Manager\+::get\+Music (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{music\+Path }\end{DoxyParamCaption})}
+
+
+
+get the music from specific path, used for long music 
+
+
+\begin{DoxyParams}{Parameters}
+{\em music\+Path} & path of specific music \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired music 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_resource_manager_a0ecf80e605676ccf237e774e27487330}\label{class_resource_manager_a0ecf80e605676ccf237e774e27487330}} 
+\index{ResourceManager@{ResourceManager}!getTextTexture@{getTextTexture}}
+\index{getTextTexture@{getTextTexture}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getTextTexture()}{getTextTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture $\ast$ Resource\+Manager\+::get\+Text\+Texture (\begin{DoxyParamCaption}\item[{char const $\ast$}]{text,  }\item[{std\+::string const \&}]{style,  }\item[{bool}]{is\+English }\end{DoxyParamCaption})}
+
+
+
+get the text texture of specific content 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & content to display \\
+\hline
+{\em style} & style of the English text, be either \char`\"{}\+R\char`\"{} for regular or \char`\"{}\+B\char`\"{} for bold (default) \\
+\hline
+{\em is\+English} & flag for font selection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired texture 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_resource_manager_a84c34e2f3ac9d2a2e4d337767ea8c749}\label{class_resource_manager_a84c34e2f3ac9d2a2e4d337767ea8c749}} 
+\index{ResourceManager@{ResourceManager}!init@{init}}
+\index{init@{init}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::init (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Initialze the resource manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & to initialize the fonts \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_resource_manager_a91756683167c290b33b7525881122940}\label{class_resource_manager_a91756683167c290b33b7525881122940}} 
+\index{ResourceManager@{ResourceManager}!instance@{instance}}
+\index{instance@{instance}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} \& Resource\+Manager\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+acquire the instance of the resource manager 
+
+\begin{DoxyWarning}{Warning}
+initializing SDL and call \mbox{\hyperlink{class_resource_manager_a84c34e2f3ac9d2a2e4d337767ea8c749}{init()}} first before using any get method 
+
+\mbox{\hyperlink{class_resource_manager_a1a7e1c5f097d977ebd90a685b293af35}{destroy()}} must be called after usage to release resources
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+the resource manager instance 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_resource_manager_8hpp}{Resource\+Manager.\+hpp}}\item 
+src/Resource\+Manager.\+cpp\end{DoxyCompactItemize}

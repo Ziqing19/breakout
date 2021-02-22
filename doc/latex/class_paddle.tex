@@ -1,0 +1,86 @@
+\hypertarget{class_paddle}{}\doxysection{Paddle Class Reference}
+\label{class_paddle}\index{Paddle@{Paddle}}
+
+
+Defines a paddle controlled by the player.  
+
+
+
+
+{\ttfamily \#include $<$Breakout.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_paddle_a4debc741f7e4f272c641d0fcafec47c0}\label{class_paddle_a4debc741f7e4f272c641d0fcafec47c0}} 
+void \mbox{\hyperlink{class_paddle_a4debc741f7e4f272c641d0fcafec47c0}{init}} (std\+::string const \&path)
+\begin{DoxyCompactList}\small\item\em a trivial constructor accepts no param and initialize its members, as well as loading the texture \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_paddle_a23ac42d939cc366a2d5047cbf8576ad2}{update}} (\mbox{\hyperlink{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034}{Buttons}} direction, float dt)
+\begin{DoxyCompactList}\small\item\em update the position of the paddle \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_paddle_a3cdd4ce5a3c482cbdf1080c4c6e2176d}{draw}} (SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em render images \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_paddle_a2e604fb37fd744a7917a26ede47b4cea}\label{class_paddle_a2e604fb37fd744a7917a26ede47b4cea}} 
+void \mbox{\hyperlink{class_paddle_a2e604fb37fd744a7917a26ede47b4cea}{reset}} ()
+\begin{DoxyCompactList}\small\item\em reset the paddle position to the middle \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} \mbox{\hyperlink{class_paddle_aa61b54688e288f6e7a05cf495f5403d0}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em get the position of the paddle \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a paddle controlled by the player. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_paddle_a3cdd4ce5a3c482cbdf1080c4c6e2176d}\label{class_paddle_a3cdd4ce5a3c482cbdf1080c4c6e2176d}} 
+\index{Paddle@{Paddle}!draw@{draw}}
+\index{draw@{draw}!Paddle@{Paddle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Paddle\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+render images 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & SDL renderer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_paddle_aa61b54688e288f6e7a05cf495f5403d0}\label{class_paddle_aa61b54688e288f6e7a05cf495f5403d0}} 
+\index{Paddle@{Paddle}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Paddle@{Paddle}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2_d}{Vector2D}} Paddle\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the position of the paddle 
+
+\begin{DoxyWarning}{Warning}
+the position is relative to the screen part
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+the position vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_paddle_a23ac42d939cc366a2d5047cbf8576ad2}\label{class_paddle_a23ac42d939cc366a2d5047cbf8576ad2}} 
+\index{Paddle@{Paddle}!update@{update}}
+\index{update@{update}!Paddle@{Paddle}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Paddle\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034}{Buttons}}}]{direction,  }\item[{float}]{dt }\end{DoxyParamCaption})}
+
+
+
+update the position of the paddle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & direction of movement \\
+\hline
+{\em dt} & time elapsed between loops \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_breakout_8hpp}{Breakout.\+hpp}}\item 
+src/\mbox{\hyperlink{_paddle_8cpp}{Paddle.\+cpp}}\end{DoxyCompactItemize}

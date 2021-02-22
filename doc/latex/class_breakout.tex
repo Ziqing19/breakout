@@ -1,0 +1,36 @@
+\hypertarget{class_breakout}{}\doxysection{Breakout Class Reference}
+\label{class_breakout}\index{Breakout@{Breakout}}
+
+
+The main game class that controls every thing.  
+
+
+
+
+{\ttfamily \#include $<$Breakout.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_breakout_a071b35fb71266be7a26511abcc504429}\label{class_breakout_a071b35fb71266be7a26511abcc504429}} 
+\mbox{\hyperlink{class_breakout_a071b35fb71266be7a26511abcc504429}{Breakout}} ()
+\begin{DoxyCompactList}\small\item\em Constructor that initiate all the SDL-\/relevant libraries, and a basic interface. It logs error message if SDL is not successfully initialized. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_breakout_af7cb98ed673a92e7f91e0b23fd371e2b}\label{class_breakout_af7cb98ed673a92e7f91e0b23fd371e2b}} 
+\mbox{\hyperlink{class_breakout_af7cb98ed673a92e7f91e0b23fd371e2b}{$\sim$\+Breakout}} ()
+\begin{DoxyCompactList}\small\item\em De-\/constructor that destroy SDL handlers and close the SDL-\/relevant libraries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_breakout_ac2587bebcc2a37f98dee00d4bf96be19}\label{class_breakout_ac2587bebcc2a37f98dee00d4bf96be19}} 
+void \mbox{\hyperlink{class_breakout_ac2587bebcc2a37f98dee00d4bf96be19}{config}} ()
+\begin{DoxyCompactList}\small\item\em User entry of the game. It first displays the basic user interface for language selection, then the main loop of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main game class that controls every thing. 
+
+In short, to run the game you should first create a instance of the class (i.\+e. break), then call break.\+config() to run the game.~\newline
+ The main loop will run infinitely unless close the window, or press Q in the menu.~\newline
+The program will log the situation of image texture \& audio resources loading and unloading, as well as the SDL library. All the resources should load and unload in a FIFO order, and must be in pair. It prints the error log to the screen if there occurs an incidence. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_breakout_8hpp}{Breakout.\+hpp}}\item 
+src/\mbox{\hyperlink{_breakout_8cpp}{Breakout.\+cpp}}\end{DoxyCompactItemize}

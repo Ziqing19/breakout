@@ -1,0 +1,88 @@
+\hypertarget{_tiny_math_8hpp}{}\doxysection{include/\+Tiny\+Math.hpp File Reference}
+\label{_tiny_math_8hpp}\index{include/TinyMath.hpp@{include/TinyMath.hpp}}
+
+
+A header-\/only math library designed for vector and matrix calculation.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_vector2_d}{Vector2D}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_vector2_d}{Vector2D}} performs vector operations with 2-\/dimensions. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_vector3_d}{Vector3D}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_vector3_d}{Vector3D}} performs vector operations with 3-\/dimensions The purpose of this class is primarily for 3D graphics applications. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_matrix3_d}{Matrix3D}}
+\begin{DoxyCompactList}\small\item\em Matrix 3D represents 3x3 matrices in Math. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a23288b0a29c27bdbd6455c9adcef89e6}\label{_tiny_math_8hpp_a23288b0a29c27bdbd6455c9adcef89e6}} 
+\#define {\bfseries F\+\_\+\+ERROR}~0.\+0001
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a18777ee571bdc15e6c4d558d7c452630}\label{_tiny_math_8hpp_a18777ee571bdc15e6c4d558d7c452630}} 
+float {\bfseries Dot} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&a, const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&b)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a6658e7aabb07d954d07e88498e8b8e06}\label{_tiny_math_8hpp_a6658e7aabb07d954d07e88498e8b8e06}} 
+\mbox{\hyperlink{struct_vector3_d}{Vector3D}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&v, float s)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_af5294a610ce5a6418d3b520410968e83}\label{_tiny_math_8hpp_af5294a610ce5a6418d3b520410968e83}} 
+\mbox{\hyperlink{struct_vector3_d}{Vector3D}} {\bfseries operator/} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&v, float s)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_ac81d3bd179bf0c48e4aa0d1600bdc46a}\label{_tiny_math_8hpp_ac81d3bd179bf0c48e4aa0d1600bdc46a}} 
+\mbox{\hyperlink{struct_vector3_d}{Vector3D}} {\bfseries operator-\/} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&v)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a96d8b5b1fcc7854c8081d95361f2a8c3}\label{_tiny_math_8hpp_a96d8b5b1fcc7854c8081d95361f2a8c3}} 
+float {\bfseries Magnitude} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&v)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a39bfe21a2d1ab6984ded35b5355b202e}\label{_tiny_math_8hpp_a39bfe21a2d1ab6984ded35b5355b202e}} 
+\mbox{\hyperlink{struct_vector3_d}{Vector3D}} {\bfseries operator+} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&a, const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&b)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a7ee82807781e470db564c4db6e9de245}\label{_tiny_math_8hpp_a7ee82807781e470db564c4db6e9de245}} 
+\mbox{\hyperlink{struct_vector3_d}{Vector3D}} {\bfseries operator-\/} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&a, const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&b)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a0e0e5626a3186558b98ce8a6ddecc1a7}\label{_tiny_math_8hpp_a0e0e5626a3186558b98ce8a6ddecc1a7}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&u, const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&v)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_aa342825cc6834c8d3974c76f337cf5c7}\label{_tiny_math_8hpp_aa342825cc6834c8d3974c76f337cf5c7}} 
+\mbox{\hyperlink{struct_vector3_d}{Vector3D}} {\bfseries Normalize} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&v)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a8fca34c1cece95aa7e94643d93765afc}\label{_tiny_math_8hpp_a8fca34c1cece95aa7e94643d93765afc}} 
+\mbox{\hyperlink{struct_vector3_d}{Vector3D}} {\bfseries Project} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&a, const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&b)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a8f7dc67f12f219c9cce68c8a304f4112}\label{_tiny_math_8hpp_a8f7dc67f12f219c9cce68c8a304f4112}} 
+\mbox{\hyperlink{struct_vector3_d}{Vector3D}} {\bfseries Cross\+Product} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&a, const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&b)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a17246c015f40828748476d2680ffc342}\label{_tiny_math_8hpp_a17246c015f40828748476d2680ffc342}} 
+\mbox{\hyperlink{struct_matrix3_d}{Matrix3D}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{struct_matrix3_d}{Matrix3D}} \&A, const \mbox{\hyperlink{struct_matrix3_d}{Matrix3D}} \&B)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a6fd270d0560f75521aceba85c2c282c4}\label{_tiny_math_8hpp_a6fd270d0560f75521aceba85c2c282c4}} 
+\mbox{\hyperlink{struct_vector3_d}{Vector3D}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{struct_matrix3_d}{Matrix3D}} \&M, const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&v)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a0569bdeeaff0705d7014156a6c611fa6}\label{_tiny_math_8hpp_a0569bdeeaff0705d7014156a6c611fa6}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{struct_matrix3_d}{Matrix3D}} \&A, const \mbox{\hyperlink{struct_matrix3_d}{Matrix3D}} \&B)
+\item 
+\mbox{\Hypertarget{_tiny_math_8hpp_a8d737013dae0f015dd4cbf90acda5273}\label{_tiny_math_8hpp_a8d737013dae0f015dd4cbf90acda5273}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{struct_matrix3_d}{Matrix3D}} \&A, const \mbox{\hyperlink{struct_matrix3_d}{Matrix3D}} \&B)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A header-\/only math library designed for vector and matrix calculation. 
+
+\begin{DoxyAuthor}{Author}
+Ziqing Mao \& Michael Shah
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+@email mao.\+zi(at)northeastern.\+edu
+
+\begin{DoxyDate}{Date}
+21-\/Feb-\/2021 
+\end{DoxyDate}

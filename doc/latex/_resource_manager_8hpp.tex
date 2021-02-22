@@ -1,0 +1,36 @@
+\hypertarget{_resource_manager_8hpp}{}\doxysection{include/\+Resource\+Manager.hpp File Reference}
+\label{_resource_manager_8hpp}\index{include/ResourceManager.hpp@{include/ResourceManager.hpp}}
+
+
+The header of a single resource manager that controls all resources.  
+
+
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}SDL\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}SDL\+\_\+ttf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}SDL\+\_\+mixer.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}}
+\begin{DoxyCompactList}\small\item\em A generic resource manager that stores different resources and ensures the uniqueness of the copy in the memory. It is designed to be a singleton, and can be called by the static \mbox{\hyperlink{class_resource_manager_a91756683167c290b33b7525881122940}{instance()}} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The header of a single resource manager that controls all resources. 
+
+\begin{DoxyAuthor}{Author}
+Ziqing Mao
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+@email mao.\+zi(at)northeastern.\+edu
+
+\begin{DoxyDate}{Date}
+21-\/Feb-\/2021
+\end{DoxyDate}
+The resource manager is implemented in a singleton, with its constructor, de-\/constructor and assigning operation hidden from outer access. ~\newline
+ User calls different get methods to inquire for a certain resource. Before allocating memory, the resource manager will search corresponding map to verify its existence. If it has been cached before, the manager will directly return the pointer from the map instead of allocating new spaces. This implement ensures that for specific resource there is only one copy in the memory. ~\newline
+ At present the resource manager only supports images, texts, and musics. By it can be easily extended by adding extra map and implementing get methods needed. ~\newline

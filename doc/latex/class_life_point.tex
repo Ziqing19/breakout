@@ -1,0 +1,82 @@
+\hypertarget{class_life_point}{}\doxysection{Life\+Point Class Reference}
+\label{class_life_point}\index{LifePoint@{LifePoint}}
+
+
+Container for the life point icons. It stores multiple icons in one instance.  
+
+
+
+
+{\ttfamily \#include $<$Breakout.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_life_point_a9cd7d1428065a65cde5641759afe68ea}{init}} (\mbox{\hyperlink{struct_vector2_d}{Vector2D}} const \&position, float size)
+\begin{DoxyCompactList}\small\item\em Set the attributes of the Life\+Points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_life_point_a22003d744e3b379c02df53d0471d6152}{update}} (int life\+Points)
+\begin{DoxyCompactList}\small\item\em Update the number of remaining life points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_life_point_a77e2f11a6778add775d6fb83bacdaf73}{draw}} (SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Draw the image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Container for the life point icons. It stores multiple icons in one instance. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_life_point_a77e2f11a6778add775d6fb83bacdaf73}\label{class_life_point_a77e2f11a6778add775d6fb83bacdaf73}} 
+\index{LifePoint@{LifePoint}!draw@{draw}}
+\index{draw@{draw}!LifePoint@{LifePoint}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Life\+Point\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Draw the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & SDL renderer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_life_point_a9cd7d1428065a65cde5641759afe68ea}\label{class_life_point_a9cd7d1428065a65cde5641759afe68ea}} 
+\index{LifePoint@{LifePoint}!init@{init}}
+\index{init@{init}!LifePoint@{LifePoint}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Life\+Point\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2_d}{Vector2D}} const \&}]{position,  }\item[{float}]{size }\end{DoxyParamCaption})}
+
+
+
+Set the attributes of the Life\+Points. 
+
+\begin{DoxyWarning}{Warning}
+the position is relative to the {\bfseries{window}}
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em position} & position relative to the {\bfseries{window}} \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_life_point_a22003d744e3b379c02df53d0471d6152}\label{class_life_point_a22003d744e3b379c02df53d0471d6152}} 
+\index{LifePoint@{LifePoint}!update@{update}}
+\index{update@{update}!LifePoint@{LifePoint}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Life\+Point\+::update (\begin{DoxyParamCaption}\item[{int}]{life\+Points }\end{DoxyParamCaption})}
+
+
+
+Update the number of remaining life points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em life\+Points} & number used to updated \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_breakout_8hpp}{Breakout.\+hpp}}\item 
+src/\mbox{\hyperlink{_life_point_8cpp}{Life\+Point.\+cpp}}\end{DoxyCompactItemize}

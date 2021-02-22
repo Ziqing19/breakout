@@ -1,0 +1,71 @@
+\hypertarget{class_text}{}\doxysection{Text Class Reference}
+\label{class_text}\index{Text@{Text}}
+
+
+Container for a text texture.  
+
+
+
+
+{\ttfamily \#include $<$Breakout.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_text_a60e2bf216bcb4ef716861514713bbb56}{init}} (\mbox{\hyperlink{struct_vector2_d}{Vector2D}} const \&position, std\+::string const \&text, int max\+Height=WINDOW\+\_\+\+HEIGHT, std\+::string const \&style=\char`\"{}B\char`\"{}, bool is\+English=true)
+\begin{DoxyCompactList}\small\item\em Set the attributes of a text texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_a1119b6f6a36c6a3b7e59d92cee306d57}{draw}} (SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em render the image \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Container for a text texture. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_text_a1119b6f6a36c6a3b7e59d92cee306d57}\label{class_text_a1119b6f6a36c6a3b7e59d92cee306d57}} 
+\index{Text@{Text}!draw@{draw}}
+\index{draw@{draw}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Text\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+render the image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & SDL renderer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_text_a60e2bf216bcb4ef716861514713bbb56}\label{class_text_a60e2bf216bcb4ef716861514713bbb56}} 
+\index{Text@{Text}!init@{init}}
+\index{init@{init}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Text\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2_d}{Vector2D}} const \&}]{position,  }\item[{std\+::string const \&}]{text,  }\item[{int}]{max\+Height = {\ttfamily WINDOW\+\_\+HEIGHT},  }\item[{std\+::string const \&}]{style = {\ttfamily \char`\"{}B\char`\"{}},  }\item[{bool}]{is\+English = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Set the attributes of a text texture. 
+
+\begin{DoxyWarning}{Warning}
+the position is relative to the {\bfseries{window}}, and it is the center position of the texture
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the {\bfseries{center}} position \\
+\hline
+{\em text} & its content, if it is Chinese, set the is\+English flag to {\bfseries{false}} \\
+\hline
+{\em max\+Height} & max height of the text, notes the text shows in one line \\
+\hline
+{\em style} & the style of {\bfseries{English}} text, either \char`\"{}\+R\char`\"{} for regular or \char`\"{}\+B\char`\"{} for bold, \char`\"{}\+B\char`\"{} by default \\
+\hline
+{\em is\+English} & flag to switch to a Chinese supported font, true by default \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_breakout_8hpp}{Breakout.\+hpp}}\item 
+src/\mbox{\hyperlink{_text_8cpp}{Text.\+cpp}}\end{DoxyCompactItemize}

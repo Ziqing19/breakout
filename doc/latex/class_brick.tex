@@ -1,0 +1,118 @@
+\hypertarget{class_brick}{}\doxysection{Brick Class Reference}
+\label{class_brick}\index{Brick@{Brick}}
+
+
+Defines a single brick and its active state.  
+
+
+
+
+{\ttfamily \#include $<$Breakout.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_brick_a1c5f236f8adce48b063eef93806ea341}{init}} (\mbox{\hyperlink{struct_vector2_d}{Vector2D}} position, std\+::string const \&path, int score)
+\begin{DoxyCompactList}\small\item\em Set the attributes of a brick. It becomes active after \mbox{\hyperlink{class_brick_a1c5f236f8adce48b063eef93806ea341}{init()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_brick_a4de9631313f7c323236d1b3b5cc98a8d}\label{class_brick_a4de9631313f7c323236d1b3b5cc98a8d}} 
+void \mbox{\hyperlink{class_brick_a4de9631313f7c323236d1b3b5cc98a8d}{breakout}} ()
+\begin{DoxyCompactList}\small\item\em set the brick to be inactive \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_brick_a4e949ab82f3529cd654af2f9108c810f}{draw}} (SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em render the image \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_brick_a3bef8428be2e97d777ddad5ad0baeb25}{get\+Score}} () const
+\begin{DoxyCompactList}\small\item\em get the score of this brick \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_brick_a5d7d33103c048176da0e5789893f27f1}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em inquiry on its active state \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} \mbox{\hyperlink{class_brick_ac55e5d30813dbe9531664849121b7c7d}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em get the position of the brick \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a single brick and its active state. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_brick_a4e949ab82f3529cd654af2f9108c810f}\label{class_brick_a4e949ab82f3529cd654af2f9108c810f}} 
+\index{Brick@{Brick}!draw@{draw}}
+\index{draw@{draw}!Brick@{Brick}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Brick\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+render the image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & SDL renderer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_brick_ac55e5d30813dbe9531664849121b7c7d}\label{class_brick_ac55e5d30813dbe9531664849121b7c7d}} 
+\index{Brick@{Brick}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Brick@{Brick}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2_d}{Vector2D}} Brick\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the position of the brick 
+
+\begin{DoxyWarning}{Warning}
+the position is relative to the screen
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+the postion vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_brick_a3bef8428be2e97d777ddad5ad0baeb25}\label{class_brick_a3bef8428be2e97d777ddad5ad0baeb25}} 
+\index{Brick@{Brick}!getScore@{getScore}}
+\index{getScore@{getScore}!Brick@{Brick}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily int Brick\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the score of this brick 
+
+\begin{DoxyReturn}{Returns}
+its score 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_brick_a1c5f236f8adce48b063eef93806ea341}\label{class_brick_a1c5f236f8adce48b063eef93806ea341}} 
+\index{Brick@{Brick}!init@{init}}
+\index{init@{init}!Brick@{Brick}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Brick\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2_d}{Vector2D}}}]{position,  }\item[{std\+::string const \&}]{path,  }\item[{int}]{score }\end{DoxyParamCaption})}
+
+
+
+Set the attributes of a brick. It becomes active after \mbox{\hyperlink{class_brick_a1c5f236f8adce48b063eef93806ea341}{init()}} 
+
+\begin{DoxyWarning}{Warning}
+the position is relative to the screen
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em position} & position of the brick \\
+\hline
+{\em path} & path of the texture \\
+\hline
+{\em score} & score of the brick \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_brick_a5d7d33103c048176da0e5789893f27f1}\label{class_brick_a5d7d33103c048176da0e5789893f27f1}} 
+\index{Brick@{Brick}!isActive@{isActive}}
+\index{isActive@{isActive}!Brick@{Brick}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily bool Brick\+::is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+inquiry on its active state 
+
+\begin{DoxyReturn}{Returns}
+whether it is active 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_breakout_8hpp}{Breakout.\+hpp}}\item 
+src/\mbox{\hyperlink{_brick_8cpp}{Brick.\+cpp}}\end{DoxyCompactItemize}

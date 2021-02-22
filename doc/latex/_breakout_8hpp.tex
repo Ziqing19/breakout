@@ -1,0 +1,180 @@
+\hypertarget{_breakout_8hpp}{}\doxysection{include/\+Breakout.hpp File Reference}
+\label{_breakout_8hpp}\index{include/Breakout.hpp@{include/Breakout.hpp}}
+
+
+The main header file of the game program.  
+
+
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include \char`\"{}SDL\+\_\+ttf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}SDL\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}SDL\+\_\+mixer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Resource\+Manager.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Tiny\+Math.\+hpp\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_contact}{Contact}}
+\begin{DoxyCompactList}\small\item\em Container of Collision\+Type class as well as a penetration value. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_ball}{Ball}}
+\begin{DoxyCompactList}\small\item\em Defines the movement and interactions between the ball and other objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_paddle}{Paddle}}
+\begin{DoxyCompactList}\small\item\em Defines a paddle controlled by the player. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_brick}{Brick}}
+\begin{DoxyCompactList}\small\item\em Defines a single brick and its active state. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_text}{Text}}
+\begin{DoxyCompactList}\small\item\em Container for a text texture. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_life_point}{Life\+Point}}
+\begin{DoxyCompactList}\small\item\em Container for the life point icons. It stores multiple icons in one instance. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_breakout}{Breakout}}
+\begin{DoxyCompactList}\small\item\em The main game class that controls every thing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a498d9f026138406895e9a34b504ac6a6}\label{_breakout_8hpp_a498d9f026138406895e9a34b504ac6a6}} 
+\#define {\bfseries WINDOW\+\_\+\+WIDTH}~960.\+0f
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a5473cf64fa979b48335079c99532e243}\label{_breakout_8hpp_a5473cf64fa979b48335079c99532e243}} 
+\#define {\bfseries WINDOW\+\_\+\+HEIGHT}~600.\+0f
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a15bd1a7109dfbc9c82dc540bfd227608}\label{_breakout_8hpp_a15bd1a7109dfbc9c82dc540bfd227608}} 
+\#define {\bfseries BRICK\+\_\+\+WIDTH}~60.\+0f
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a885aa654e3f869d7d9d2736b0debcbfb}\label{_breakout_8hpp_a885aa654e3f869d7d9d2736b0debcbfb}} 
+\#define {\bfseries BRICK\+\_\+\+HEIGHT}~20.\+0f
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a06c6c391fc11d106e9909f0401b255b1}\label{_breakout_8hpp_a06c6c391fc11d106e9909f0401b255b1}} 
+\#define {\bfseries COLUMNS}~12
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a3cfd3aa62338d12609f6d65bce97e9cd}\label{_breakout_8hpp_a3cfd3aa62338d12609f6d65bce97e9cd}} 
+\#define {\bfseries ROWS}~29
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a2cd109632a6dcccaa80b43561b1ab700}\label{_breakout_8hpp_a2cd109632a6dcccaa80b43561b1ab700}} 
+\#define {\bfseries SCREEN\+\_\+\+WIDTH}~BRICK\+\_\+\+WIDTH $\ast$ (COLUMNS -\/ 0.\+5f)
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a6974d08a74da681b3957b2fead2608b8}\label{_breakout_8hpp_a6974d08a74da681b3957b2fead2608b8}} 
+\#define {\bfseries SCREEN\+\_\+\+HEIGHT}~BRICK\+\_\+\+HEIGHT $\ast$ ROWS
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a59f2c3dacc9e6102981fac70883b296e}\label{_breakout_8hpp_a59f2c3dacc9e6102981fac70883b296e}} 
+\#define {\bfseries BALL\+\_\+\+WIDTH}~15.\+0f
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a63e30a0ebc174fbdc445f8c6a37138ec}\label{_breakout_8hpp_a63e30a0ebc174fbdc445f8c6a37138ec}} 
+\#define {\bfseries BALL\+\_\+\+HEIGHT}~15.\+0f
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a5247f956703cbf9b1bae869c955e4e01}\label{_breakout_8hpp_a5247f956703cbf9b1bae869c955e4e01}} 
+\#define {\bfseries PADDLE\+\_\+\+WIDTH}~BRICK\+\_\+\+HEIGHT $\ast$ 10.\+0f
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_ae17975d20fcf6c462510b2e1a601042f}\label{_breakout_8hpp_ae17975d20fcf6c462510b2e1a601042f}} 
+\#define {\bfseries PADDLE\+\_\+\+HEIGHT}~BRICK\+\_\+\+HEIGHT
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_ab2f989aa48eea284a19ef314bbd465ea}\label{_breakout_8hpp_ab2f989aa48eea284a19ef314bbd465ea}} 
+\#define {\bfseries PADDLE\+\_\+\+SPEED}~1.\+0f
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a40adb448bd1bebb3e41482a981f4d2f4}\label{_breakout_8hpp_a40adb448bd1bebb3e41482a981f4d2f4}} 
+\#define {\bfseries BALL\+\_\+\+SPEED}~0.\+3f
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_ac92ca5ab87034a348decad7ee8d4bd1b}\label{_breakout_8hpp_ac92ca5ab87034a348decad7ee8d4bd1b}} 
+\#define {\bfseries FPS}~60.\+0f
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a17a132c0c50568ab580005f838265aa3}\label{_breakout_8hpp_a17a132c0c50568ab580005f838265aa3}} 
+\#define {\bfseries X\+\_\+\+PADDING}~260.\+0f
+\item 
+\mbox{\Hypertarget{_breakout_8hpp_a3f917098d4b964345e470047b1b022f7}\label{_breakout_8hpp_a3f917098d4b964345e470047b1b022f7}} 
+\#define {\bfseries Y\+\_\+\+PADDING}~10.\+0f
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034}{Buttons}} \{ \mbox{\hyperlink{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034a31677d10acc110c4b0624d6dd09b2a5e}{Paddle\+Left}}
+, \mbox{\hyperlink{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034ac492a5e312e9bc04c0aa94b61d983e42}{Paddle\+Right}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the direction of paddle movement according to key pressed. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{_breakout_8hpp_aa884075f403706dceea29a61771a0d44}{Collision\+Type}} \{ \newline
+\mbox{\hyperlink{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{_breakout_8hpp_aa884075f403706dceea29a61771a0d44aa4ffdcf0dc1f31b9acaf295d75b51d00}{Top}}
+, \mbox{\hyperlink{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a2ad9d63b69c4a10a5cc9cad923133bc4}{Bottom}}
+, \mbox{\hyperlink{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a945d5e233cf7d6240f6b783b36a374ff}{Left}}
+, \newline
+\mbox{\hyperlink{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a92b09c7c48c520c3c55e497875da437c}{Right}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the position where collision happens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main header file of the game program. 
+
+\begin{DoxyAuthor}{Author}
+Ziqing Mao
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+@email mao.\+zi(at)northeastern.\+edu
+
+\begin{DoxyDate}{Date}
+21-\/Feb-\/2021
+\end{DoxyDate}
+This header defines different object classes of the breakout game. Instances, even from different classes, can share the same texture that only has one copy in the memory. ~\newline
+ In the light of flyweight pattern, instances only contain their unique information like position and movement states, but textures which can be shared by different instances in the same texture demand. This is accomplished by a single resource manager that holds all the resources, with instances of object only contain the pointer. The resource manager will search in a map before allocating new memory to ensure the uniqueness when it is called for loading a certain resource.~\newline
+ The calculation of object movement and collision is supported by Tiny\+Math library, which includes vector addition, scalar multiplication and so on. ~\newline
+ 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034}\label{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034}} 
+\index{Breakout.hpp@{Breakout.hpp}!Buttons@{Buttons}}
+\index{Buttons@{Buttons}!Breakout.hpp@{Breakout.hpp}}
+\doxysubsubsection{\texorpdfstring{Buttons}{Buttons}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034}{Buttons}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Defines the direction of paddle movement according to key pressed. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Breakout.hpp@{Breakout.hpp}}\index{Breakout.hpp@{Breakout.hpp}!None@{None}}}\mbox{\Hypertarget{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034a6adf97f83acf6453d4a6a4b1070f3754}\label{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&indicating the paddle is not moving \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PaddleLeft@{PaddleLeft}!Breakout.hpp@{Breakout.hpp}}\index{Breakout.hpp@{Breakout.hpp}!PaddleLeft@{PaddleLeft}}}\mbox{\Hypertarget{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034a31677d10acc110c4b0624d6dd09b2a5e}\label{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034a31677d10acc110c4b0624d6dd09b2a5e}} 
+Paddle\+Left&the paddle is moving leftwards \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PaddleRight@{PaddleRight}!Breakout.hpp@{Breakout.hpp}}\index{Breakout.hpp@{Breakout.hpp}!PaddleRight@{PaddleRight}}}\mbox{\Hypertarget{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034ac492a5e312e9bc04c0aa94b61d983e42}\label{_breakout_8hpp_a2200c9a3564da59c1160338587ecb034ac492a5e312e9bc04c0aa94b61d983e42}} 
+Paddle\+Right&the paddle is moving rightwards \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_breakout_8hpp_aa884075f403706dceea29a61771a0d44}\label{_breakout_8hpp_aa884075f403706dceea29a61771a0d44}} 
+\index{Breakout.hpp@{Breakout.hpp}!CollisionType@{CollisionType}}
+\index{CollisionType@{CollisionType}!Breakout.hpp@{Breakout.hpp}}
+\doxysubsubsection{\texorpdfstring{CollisionType}{CollisionType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_breakout_8hpp_aa884075f403706dceea29a61771a0d44}{Collision\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Defines the position where collision happens. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Breakout.hpp@{Breakout.hpp}}\index{Breakout.hpp@{Breakout.hpp}!None@{None}}}\mbox{\Hypertarget{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a6adf97f83acf6453d4a6a4b1070f3754}\label{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&the ball is not collided on anything \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Top@{Top}!Breakout.hpp@{Breakout.hpp}}\index{Breakout.hpp@{Breakout.hpp}!Top@{Top}}}\mbox{\Hypertarget{_breakout_8hpp_aa884075f403706dceea29a61771a0d44aa4ffdcf0dc1f31b9acaf295d75b51d00}\label{_breakout_8hpp_aa884075f403706dceea29a61771a0d44aa4ffdcf0dc1f31b9acaf295d75b51d00}} 
+Top&the ball is collided with the top of a object \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bottom@{Bottom}!Breakout.hpp@{Breakout.hpp}}\index{Breakout.hpp@{Breakout.hpp}!Bottom@{Bottom}}}\mbox{\Hypertarget{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a2ad9d63b69c4a10a5cc9cad923133bc4}\label{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a2ad9d63b69c4a10a5cc9cad923133bc4}} 
+Bottom&the ball is collided with the bottom of a object \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Left@{Left}!Breakout.hpp@{Breakout.hpp}}\index{Breakout.hpp@{Breakout.hpp}!Left@{Left}}}\mbox{\Hypertarget{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a945d5e233cf7d6240f6b783b36a374ff}\label{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a945d5e233cf7d6240f6b783b36a374ff}} 
+Left&the ball is collided with the left side of a object \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!Breakout.hpp@{Breakout.hpp}}\index{Breakout.hpp@{Breakout.hpp}!Right@{Right}}}\mbox{\Hypertarget{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a92b09c7c48c520c3c55e497875da437c}\label{_breakout_8hpp_aa884075f403706dceea29a61771a0d44a92b09c7c48c520c3c55e497875da437c}} 
+Right&the ball is collided with the right side of a object \\
+\hline
+
+\end{DoxyEnumFields}
